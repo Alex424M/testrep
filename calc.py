@@ -1,17 +1,39 @@
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
-op = input("Операция (+, -, *, /): ")
+def add(a, b):
+    return a + b
 
-if op == '+':
-    print(a + b)
-elif op == '-':
-    print(a - b)
-elif op == '*':
-    print(a * b)
-elif op == '/':
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
     if b != 0:
-        print(a / b)
+        return a / b
     else:
-        print("Делить на ноль нельзя!")
-else:
-    print("Неизвестная операция")
+        return "Деление на ноль!"
+
+
+def main():
+    a = int(input("Введите первое число: "))
+    b = int(input("Введите второе число: "))
+    op = input("Операция (+, -, *, /): ")
+
+    if op == '+':
+        print(add(a, b))
+    elif op == '-':
+        print(subtract(a, b))
+    elif op == '*':
+        print(multiply(a, b))
+    elif op == '/':
+        print(divide(a, b))
+    else:
+        print("Неизвестная операция")
+
+
+if __name__ == "__main__":
+    main()
+
